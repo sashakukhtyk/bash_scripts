@@ -41,7 +41,8 @@ read -p "Enter a static IP address (or press Enter to use current IP: $IP_ADDRES
 STATIC_IP=${STATIC_IP:-$IP_ADDRESS}  # Use current IP if none provided
 
 # Edit the network configuration file to use static IP (optional)
-# This step assumes the use of /etc/network/interfaces (modify if using other network management tools like Netplan)
+# This step assumes the use of /etc/network/interfaces 
+# (modify if using other network management tools like Netplan)
 echo "Configuring network settings..."
 sudo bash -c "cat > /etc/network/interfaces <<EOF
 # Static IP configuration for $INTERFACE
